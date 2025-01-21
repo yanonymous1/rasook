@@ -91,15 +91,42 @@ button:focus {
     </header>
     <main>
         <div class="notice">
-            <h2>Google Account</h2>
-            <p> mm8356854@gmail.com
-🔵Recovery E-mail:- allin1@hakermail.com
-🔵Recovery Phone:- +Null?
-🔑 Password:- Restored.by.y </p>
-            <img src="1.jpg" alt="Notice Image">
-        </div>
+    <h2>Google Account</h2>
+    <p> mm8356854@gmail.com
+    <br>🔵Recovery E-mail:- allin1@hakermail.com
+    <br>🔵Recovery Phone:- +Null?
+    <br>🔑 Password:- 
+        <input type="text" value="Restored.by.y" readonly id="passwordInput">
+        <button onclick="copyPassword()" id="copyBtn">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </p>
+    <img src="1.jpg" alt="Notice Image">
+</div>
         <button onclick="updateNotice()"> Another Account</button>
     </main>
+<!-- Add Font Awesome for clipboard icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<script>
+    function copyPassword() {
+        // Get the password input element
+        var passwordInput = document.getElementById("passwordInput");
+
+        // Select the text field
+        passwordInput.select();
+        passwordInput.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text inside the text field
+        document.execCommand("copy");
+
+        // Alert the user that the text has been copied
+        alert("Password copied to clipboard: " + passwordInput.value);
+    }
+</script>
+        
+        
+    
     <footer>
         <p>© 2025 YOUNUS | <a href="https://bit.ly/mnmyounus" class="footer-link"> Main</a></p>
     </footer>
